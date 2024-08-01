@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Project;
+use App\Models\Type;
 use Carbon\Carbon;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -52,9 +53,12 @@ class ProjectSeeder extends Seeder
 
         ];
 
+        $types = Type::all()->pluck('id')->toArray();
+
 
 
         foreach ($projects as $project) {
+            $project['type_id'] = $faker->randomElement($types);
             Project::create($project);
         }
 

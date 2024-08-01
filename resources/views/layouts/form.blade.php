@@ -37,6 +37,14 @@
             <input type="text" class="form-control" id="image-url" name="image_url" value="@yield('value-image')" class="mb-3">
         </div> --}}
         <div class="col-12">
+            <select class="form-select" aria-label="Default select example" name="type_id">
+                <option selected>Select the Type of Project</option>
+                @foreach ($types as $type)
+                <option value="{{$type->id}}">{{$type->name}}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="col-12">
             <label for="inputAddress2" class="form-label">Note</label>
             <input type="text" class="form-control" id="project-note" name="note" value="@yield('value-note')">
         </div>

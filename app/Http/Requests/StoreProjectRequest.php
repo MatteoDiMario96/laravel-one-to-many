@@ -24,9 +24,6 @@ class StoreProjectRequest extends FormRequest
         return [
             //Mettere regole
             'name' => ['required', 'min:3', 'max:150'],
-            'project_created_at' => ['required'],
-            'languages_programming_used' => ['required', 'min:2', 'max:200'],
-            'image_url' => ['nullable']
 
         ];
     }

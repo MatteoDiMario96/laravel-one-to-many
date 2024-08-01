@@ -26,6 +26,7 @@
     <thead>
         <tr>
             <th scope="col">ID</th>
+            <th scope="col">Type</th>
             <th scope="col">Name</th>
             <th scope="col">Project created in date :</th>
             <th scope="col">Programming languages used :</th>
@@ -38,6 +39,7 @@
 
     <tr>
         <th scope="row">{{$project->id}}</th>
+        <td>{{$project->type->name}}</td>
         <td>{{$project->name}}</td>
         <td>{{$project->project_created_at}}</td>
         <td>{{$project->languages_programming_used}}</td>
